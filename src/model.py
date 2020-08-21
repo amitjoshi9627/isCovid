@@ -2,7 +2,7 @@ import config
 import dataset
 import utils
 import config
-from tensorflow.keras.layers import Conv2D, Flatten, Dense, MaxPooling2D, Dropout
+from tensorflow.keras.layers import Conv2D, Flatten, Dense, MaxPooling2D, Dropout, BatchNormalization
 from tensorflow.keras.models import Sequential
 
 
@@ -14,19 +14,23 @@ class CovidModel:
         self.model.add(Conv2D(32, kernel_size=(3, 3),
                               activation="relu", input_shape=config.INPUT_SHAPE))
         self.model.add(Conv2D(64, kernel_size=(3, 3), activation="relu"))
-        self.model.add(MaxPooling2D(pool_size=(2, 2)))
-        self.model.add(Dropout(0.25))
-
-        self.model.add(Conv2D(64, kernel_size=(3, 3), activation="relu"))
+        self.model.add(BatchNormalization())
         self.model.add(MaxPooling2D(pool_size=(2, 2)))
         self.model.add(Dropout(0.25))
 
         self.model.add(Conv2D(128, kernel_size=(3, 3), activation="relu"))
         self.model.add(MaxPooling2D(pool_size=(2, 2)))
+        self.model.add(BatchNormalization())
         self.model.add(Dropout(0.25))
 
         self.model.add(Conv2D(256, kernel_size=(3, 3), activation="relu"))
         self.model.add(MaxPooling2D(pool_size=(2, 2)))
+        self.model.add(BatchNormalization())
+        self.model.add(Dropout(0.25))
+
+        self.model.add(Conv2D(512, kernel_size=(3, 3), activation="relu"))
+        self.model.add(MaxPooling2D(pool_size=(2, 2)))
+        self.model.add(BatchNormalization())
         self.model.add(Dropout(0.25))
 
         self.model.add(Flatten())
