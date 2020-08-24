@@ -12,4 +12,9 @@ A Deep Learning model which predicts COVID-19 based on chest X-ray.
 4. To run this app from **Streamlit**. Run `streamlit run streamlitapp.py`.
 5. Upload your X-ray Image or you can upload the sample images provided (__data/val/__) and then check the result.
 
+### Data
+Covid-19 chest X-ray images can be downloaded from [here](https://github.com/ieee8023/covid-chestxray-dataset) and Normal chest X-ray images can be downloaded from [here](https://www.qmenta.com/covid-19-kaggle-chest-x-ray-normal/)
+
+> Web App was made using [__Streamlit__](https://www.streamlit.io/)
+
 __Please Give a :star2: if you :+1: it.__
