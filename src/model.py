@@ -1,7 +1,6 @@
 import config
 import dataset
 import utils
-import config
 from tensorflow.keras.layers import Conv2D, Flatten, Dense, MaxPooling2D, Dropout, BatchNormalization
 from tensorflow.keras.models import Sequential
 
