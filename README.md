@@ -1,6 +1,6 @@
 # isCovid
 ### By Amit Joshi
-A Deep Learning model which predicts COVID-19 based on chest X-ray.
+isCovid is a Deep Learning model which predicts COVID-19 based on chest X-ray.
 
 <img src="src/img/screeneshot1.jpg?raw=true" width="1000">
 <img src="src/img/screenshot2.jpg?raw=true" width="1000">
